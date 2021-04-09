@@ -1,4 +1,4 @@
-Pod::Spec.new do |spec|
+Pod::Spec.new do |s|
 
   s.name             = "NDLoading"
   s.version          = "1.0.0"
