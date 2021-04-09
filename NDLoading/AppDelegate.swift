@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
         
-        var setting = NDLoadingSetting()
+        let setting = NDLoadingSetting()
         setting.mainColor = .red
         setting.widthLoading = 6.0
         setting.mainBackgroundColor = .white

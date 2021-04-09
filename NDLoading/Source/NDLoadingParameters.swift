@@ -14,11 +14,17 @@ protocol NDLoadingSettingProtocol {
     func stopAnimation()
 }
 
-public struct NDLoadingSetting {
-    var mainColor: UIColor?
-    var mainBackgroundColor: UIColor?
-    var widthLoading: CGFloat?
-    var mainCornerRadius: CGFloat?
+public class NDLoadingSetting {
+    public var mainColor: UIColor?
+    public var mainBackgroundColor: UIColor?
+    public var widthLoading: CGFloat?
+    public var mainCornerRadius: CGFloat?
+    public init(mainColor: UIColor? = nil, mainBackgroundColor: UIColor? = nil, widthLoading: CGFloat? = nil, mainCornerRadius: CGFloat? = nil) {
+        self.mainColor = mainColor
+        self.mainBackgroundColor = mainBackgroundColor
+        self.widthLoading = widthLoading
+        self.mainCornerRadius = mainCornerRadius
+    }
 }
 
 public enum LoadingStyle {
