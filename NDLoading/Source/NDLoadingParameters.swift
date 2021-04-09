@@ -18,6 +18,7 @@ public struct NDLoadingSetting {
     var mainColor: UIColor?
     var mainBackgroundColor: UIColor?
     var widthLoading: CGFloat?
+    var mainCornerRadius: CGFloat?
 }
 
 public enum LoadingStyle {
@@ -26,5 +27,7 @@ public enum LoadingStyle {
     case Style3
     case Style4
     case Style5
+    case Style6
+    case Style7
 }
 

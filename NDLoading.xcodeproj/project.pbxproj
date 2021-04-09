@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F5015AF8261EAAD20080DF89 /* LoadingStyle3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5015AF7261EAAD20080DF89 /* LoadingStyle3.swift */; };
+		F55427B6261FEBB500CA9243 /* LoadingStyle6.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55427B5261FEBB500CA9243 /* LoadingStyle6.swift */; };
+		F55427B9261FF69400CA9243 /* NDHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F55427B8261FF69400CA9243 /* NDHUD.bundle */; };
+		F55427BC261FF6AF00CA9243 /* LoadingStyle7.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55427BB261FF6AF00CA9243 /* LoadingStyle7.swift */; };
 		F5B242E7261EDB3600227345 /* LoadingStyle4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B242E6261EDB3600227345 /* LoadingStyle4.swift */; };
 		F5B242EA261F0BF400227345 /* LoadingStyle5.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B242E9261F0BF400227345 /* LoadingStyle5.swift */; };
 		F5DC204D261D805D00BA0929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC204C261D805D00BA0929 /* AppDelegate.swift */; };
@@ -24,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		F5015AF7261EAAD20080DF89 /* LoadingStyle3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStyle3.swift; sourceTree = "<group>"; };
+		F55427B5261FEBB500CA9243 /* LoadingStyle6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStyle6.swift; sourceTree = "<group>"; };
+		F55427B8261FF69400CA9243 /* NDHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NDHUD.bundle; sourceTree = "<group>"; };
+		F55427BB261FF6AF00CA9243 /* LoadingStyle7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStyle7.swift; sourceTree = "<group>"; };
 		F5B242E6261EDB3600227345 /* LoadingStyle4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStyle4.swift; sourceTree = "<group>"; };
 		F5B242E9261F0BF400227345 /* LoadingStyle5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStyle5.swift; sourceTree = "<group>"; };
 		F5DC2049261D805D00BA0929 /* NDLoading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NDLoading.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +98,7 @@
 		F5DC206A261D81A400BA0929 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F55427B8261FF69400CA9243 /* NDHUD.bundle */,
 				F5DC207A261D899900BA0929 /* LoadingContentView */,
 				F5DC2073261D83E800BA0929 /* Loading */,
 				F5DC2070261D837C00BA0929 /* NDLoadingParameters.swift */,
@@ -108,6 +115,8 @@
 				F5015AF7261EAAD20080DF89 /* LoadingStyle3.swift */,
 				F5B242E6261EDB3600227345 /* LoadingStyle4.swift */,
 				F5B242E9261F0BF400227345 /* LoadingStyle5.swift */,
+				F55427B5261FEBB500CA9243 /* LoadingStyle6.swift */,
+				F55427BB261FF6AF00CA9243 /* LoadingStyle7.swift */,
 			);
 			path = Loading;
 			sourceTree = "<group>";
@@ -180,6 +189,7 @@
 				F5DC2059261D806000BA0929 /* LaunchScreen.storyboard in Resources */,
 				F5DC2068261D819F00BA0929 /* ExampleViewController.xib in Resources */,
 				F5DC2056261D806000BA0929 /* Assets.xcassets in Resources */,
+				F55427B9261FF69400CA9243 /* NDHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +202,9 @@
 			files = (
 				F5015AF8261EAAD20080DF89 /* LoadingStyle3.swift in Sources */,
 				F5DC2071261D837C00BA0929 /* NDLoadingParameters.swift in Sources */,
+				F55427B6261FEBB500CA9243 /* LoadingStyle6.swift in Sources */,
 				F5DC2075261D83F600BA0929 /* LoadingStyle1.swift in Sources */,
+				F55427BC261FF6AF00CA9243 /* LoadingStyle7.swift in Sources */,
 				F5DC2082261DBA5900BA0929 /* LoadingStyle2.swift in Sources */,
 				F5DC204D261D805D00BA0929 /* AppDelegate.swift in Sources */,
 				F5B242E7261EDB3600227345 /* LoadingStyle4.swift in Sources */,

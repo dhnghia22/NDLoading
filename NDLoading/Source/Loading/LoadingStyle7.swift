@@ -1,14 +1,14 @@
 //
-//  LoadingStyle1.swift
+//  LoadingStyle7.swift
 //  NDLoading
 //
-//  Created by Nghia Dinh on 4/7/21.
+//  Created by Nghia Dinh on 4/9/21.
 //
 
 import Foundation
 import UIKit
 
-class LoadingStyle1: UIView, NDLoadingSettingProtocol {
+class LoadingStyle7: UIView, NDLoadingSettingProtocol {
     var setting: NDLoadingSetting? {
         didSet {
             removeAllSubLayer()
@@ -23,6 +23,18 @@ class LoadingStyle1: UIView, NDLoadingSettingProtocol {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    private let maskLayer: CALayer = {
+        let maskLayer = CALayer()
+        let bundle = Bundle(for: LoadingStyle7.self)
+        let url = bundle.url(forResource: "NDHUD", withExtension: "bundle")
+        let imageBundle = Bundle(url: url!)
+        
+        let path = imageBundle!.path(forResource: "angle-mask", ofType: "png")
+        maskLayer.contents = UIImage(contentsOfFile: path!)!.cgImage!
+        return maskLayer
+    }()
     
     let flatAnimation: CABasicAnimation = {
         let animationDuration = 0.8
@@ -61,27 +73,15 @@ class LoadingStyle1: UIView, NDLoadingSettingProtocol {
                         endAngle: CGFloat(2 * Double.pi ),
                         clockwise: true)
         
-        self.overlayLayer.path = backgroundPath.cgPath
-        overlayLayer.contentsScale = UIScreen.main.scale
-        overlayLayer.frame = self.frame
-        overlayLayer.strokeColor = (setting?.mainColor ?? UIColor.red).withAlphaComponent(0.2).cgColor
-        overlayLayer.fillColor = UIColor.clear.cgColor
-        overlayLayer.lineWidth = setting?.widthLoading ?? 4
-        self.layer.addSublayer(overlayLayer)
-        
-        let mainPath = UIBezierPath()
-        mainPath.addArc( withCenter: point,
-                        radius: radius,
-                        startAngle: 0,
-                        endAngle: CGFloat(Double.pi / 4),
-                        clockwise: true)
-        
-        self.mainLayer.path = mainPath.cgPath
         mainLayer.contentsScale = UIScreen.main.scale
         mainLayer.frame = self.frame
-        mainLayer.strokeColor = (setting?.mainColor ?? UIColor.red).cgColor
+        mainLayer.path = backgroundPath.cgPath
+        mainLayer.strokeColor = (setting?.mainColor ?? .red).cgColor
         mainLayer.fillColor = UIColor.clear.cgColor
-        mainLayer.lineWidth = setting?.widthLoading ?? 4
+        mainLayer.lineWidth = (setting?.widthLoading ?? 4)
+        mainLayer.lineCap = CAShapeLayerLineCap.round
+        maskLayer.frame = mainLayer.bounds
+        mainLayer.mask = maskLayer
         
         self.layer.addSublayer(mainLayer)
         mainLayer.add(flatAnimation, forKey: "flatAnimation")
@@ -98,3 +98,4 @@ class LoadingStyle1: UIView, NDLoadingSettingProtocol {
         mainLayer.removeAllAnimations()
     }
 }
+

@@ -12,6 +12,7 @@ class LoadingStyle3: UIView, NDLoadingSettingProtocol {
     var setting: NDLoadingSetting? {
         didSet {
             removeAllSubLayer()
+            setupView()
             setupPath()
         }
     }
@@ -47,8 +48,8 @@ class LoadingStyle3: UIView, NDLoadingSettingProtocol {
     }
     
     func setupView() {
-        self.backgroundColor = UIColor.white
-        self.layer.cornerRadius = 8.0
+        self.backgroundColor = setting?.mainBackgroundColor ?? .white
+        self.layer.cornerRadius = setting?.mainCornerRadius ?? 8.0
     }
     
     func setupPath() {
@@ -69,9 +70,6 @@ class LoadingStyle3: UIView, NDLoadingSettingProtocol {
         
         
         let centerPath = UIBezierPath()
-//        centerPath.move(to: CGPoint(x: centerX, y: (self.frame.maxY - padding * 2) / 4 + padding))
-//        centerPath.addLine(to: CGPoint(x: centerX, y: (self.frame.maxY - padding * 2) / 4 * 3 + padding))
-        
         centerPath.move(to: CGPoint(x: centerX, y: self.frame.minY + padding + space))
         centerPath.addLine(to: CGPoint(x: centerX, y: self.frame.minY + padding + space + height))
         
@@ -84,8 +82,6 @@ class LoadingStyle3: UIView, NDLoadingSettingProtocol {
         
         
         let rightPath = UIBezierPath()
-//        rightPath.move(to: CGPoint(x: centerX + (setting?.widthLoading ?? 6) / 2 + 12, y: self.frame.maxY / 2))
-//        rightPath.addLine(to: CGPoint(x: centerX + (setting?.widthLoading ?? 6) / 2 + 12, y: self.frame.maxY - padding))
         
         rightPath.move(to: CGPoint(x: centerX + (setting?.widthLoading ?? 6) / 2 + 12, y: self.frame.minY + padding + space * 2))
         rightPath.addLine(to: CGPoint(x: centerX + (setting?.widthLoading ?? 6) / 2 + 12, y: self.frame.minY + padding + space * 2 + height))

@@ -12,6 +12,7 @@ class LoadingStyle4: UIView, NDLoadingSettingProtocol {
     var setting: NDLoadingSetting? {
         didSet {
             removeAllSubLayer()
+            setupView()
             setupPath()
         }
     }
@@ -32,8 +33,8 @@ class LoadingStyle4: UIView, NDLoadingSettingProtocol {
     }
     
     func setupView() {
-        self.backgroundColor = UIColor.white
-        self.layer.cornerRadius = 8.0
+        self.backgroundColor = setting?.mainBackgroundColor ?? .white
+        self.layer.cornerRadius = setting?.mainCornerRadius ?? 8.0
     }
     
     private func getScaleAnimation(withDelay delay: Double) -> CABasicAnimation {

@@ -15,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
-        NDLoading.setting = NDLoadingSetting(mainColor: .red, widthLoading: 8)
+        
+        var setting = NDLoadingSetting()
+        setting.mainColor = .red
+        setting.widthLoading = 6.0
+        setting.mainBackgroundColor = .white
+        setting.mainCornerRadius = 8.0
+        NDLoading.setting = setting
+        
         return true
     }
 

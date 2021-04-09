@@ -12,6 +12,7 @@ class LoadingStyle5: UIView, NDLoadingSettingProtocol {
     var setting: NDLoadingSetting? {
         didSet {
             removeAllSubLayer()
+            setupView()
             setupPath()
         }
     }
@@ -33,8 +34,8 @@ class LoadingStyle5: UIView, NDLoadingSettingProtocol {
     }
     
     func setupView() {
-        self.backgroundColor = UIColor.white
-        self.layer.cornerRadius = 8.0
+        self.backgroundColor = setting?.mainBackgroundColor ?? .white
+        self.layer.cornerRadius = setting?.mainCornerRadius ?? 8.0
     }
     
     private func getOpacityAnimation(withDelay delay: Double) -> CABasicAnimation {

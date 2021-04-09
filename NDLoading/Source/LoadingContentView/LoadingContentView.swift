@@ -56,6 +56,12 @@ class LoadingContentView: UIView {
         case .Style5:
             view = LoadingStyle5(frame: frame)
             break
+        case .Style6:
+            view = LoadingStyle6(frame: frame)
+            break
+        case .Style7:
+            view = LoadingStyle7(frame: frame)
+            break
         default:
             break
         }
