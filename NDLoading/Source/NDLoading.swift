@@ -20,7 +20,7 @@ class Loading {
 }
 
 public class NDLoading {
-    public static var style: LoadingStyle? {
+    public static var style: LoadingStyle? = .Style1 {
         didSet {
             Loading.shared.loadingView.style = style
         }
