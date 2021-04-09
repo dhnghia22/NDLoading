@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = "NDLoading"
-  s.version          = "1.0.0"
+  s.version          = "1.0.0-rc-1"
   s.summary          = "Loading for iOS"
   
   s.homepage         = "https://github.com/dhnghia22/NDLoading"
